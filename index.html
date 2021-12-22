@@ -7,33 +7,33 @@
   <title>Pixova Lite - Colorib</title>
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <script defer src="index.js"></script>
+  <script defer src="https://kit.fontawesome.com/307a2cb99f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="header"><a class="header-logo" href="https://demo.colorlib.com/pixova-lite">PIXOVA LITE</a></header>
-  <span></span>
-  <!-- // ___________________________________________________________________________ -->
-  <!-- <nav role="navigation">
-    <div id="menuToggle">
-    
-      <input type="checkbox" />
-      
-      <span></span>
-      <span></span>
-      <span></span>
-      
-    
-      <ul id="menu">
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Info</li></a>
-        <a href="#"><li>Contact</li></a>
-        <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+  <header class="header">
+    <div class="header-container">
+    <a class="header-logo" href="https://demo.colorlib.com/pixova-lite">PIXOVA LITE</a>
+
+    <nav class="header-navigation">
+      <div id="menuDesign">
+        <span class="header-navigation_design"></span>
+      </div>
+
+      <ul id="menu" class="header-navigation_menu">
+        <li><a href="#learn more">ABOUT</a></li>
+        <li><a href="#works">RECENT&nbsp;WORKS</a></li>
+        <li><a href="#response">TESTIMONIALS</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
+    </nav>
     </div>
-  </nav> -->
-  <!-- // ___________________________________________________________________________ -->
+  </header>
+
 
   <section class="welcome"> 
     <h3 class="welcome-title">WELCOME TO PIXOVA LITE</h3>
@@ -41,13 +41,13 @@
     <h1 class="welcome-subtitle">Free & Modern One-Page Parallax WordPress Theme</h1>
     <p class="welcome-text">Your cool buisness headline here. You can even <a class="welcome-text_link" href="">insert HTML here & images</a>. Lorem ipsum dolor sit amet lorem dolor sit amet </p>
     <div class="button">
-      <button class="button-black"><h6>LEARN MORE</h6></button>
-      <button class="button-yellow" ><h6>CONTACT US</h6></button>
+      <a href="#learn more"><button class="button-black">LEARN MORE</button></a>
+      <a href="#contact"><button class="button-yellow">CONTACT US</button></a>
     </div>
   </section>
 
   
-  <section class="solutions">
+  <section id="learn more" class="solutions anim-items">
     <h2 class="solutions-header">We build solutions for your everyday problems.</h2>
     <p class="solutions-subtitle">This is what we do in a nutshell</p>
     <p class="solutions-text">Creative ut tincidunt nibh, varius cursus nunc. Curabitur molestie, metus vel luctus euismod, mi libero laoreet odio, eu dapibus leo tortor sit amet purus. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
@@ -55,76 +55,199 @@
     <!-- diagrams -->
     <h1>DIAGRAMS</h1>
       <div class="solutions-diagrams">
+        <div class="solutions-diagrams_value">71%</div>
+          <div>
+            <canvas class="solutions-diagrams_canvas" width="255px" height="255px"></canvas>
+          </div>
       <h4>WEB DESIGN</h4>
+
       <h4>WEB DEVELOPMENT</h4>
       <h4>PRINT DESIGN</h4>
       <h4>GRAPHIC IDENTITD</h4>
     </div>
     </section>
 
-  <section class="works">
+  <section id="works" class="works">
     <h2 class="works-header">Recent works</h2>
     <p class="works-subtitle">It's show and tell time.</p>
-    <!-- images -->
 
-    <span class="works-parent">
+    <div class="works-parent">
 
         <img class="works-parent_img1" src="icons/book_with_pen.jpeg" alt="book_with_pen">
-      <span>
+      <div>
         <img class="works-parent_img1-logo1" src="icons/logo1.png" width="230px" height="35px" alt="logo1">
-      </span>
+        <button type="submit" class="works-parent_img1-logo1_button">SEE PROJECT</button>
+      </div>
     
 
       <img class="works-parent_img2" src="icons/book_and_nout.jpeg" alt="book_and_nout">
-      <span>
+      <div>
         <img class="works-parent_img2-logo2" src="icons/logo2.png" width="230px" height="35px" alt="logo2">
-      </span>
+      </div>
 
 
       <img class="works-parent_img3" src="icons/nout_in_kitchen.jpeg" alt="nout_in_kitchen">
-      <span>
+      <div>
         <img class="works-parent_img3-logo3" src="icons/logo3.png" width="230px" height="35px" alt="logo3">
-      </span>
+      </div>
 
 
       <img class="works-parent_img4" src="icons/many books.jpeg" alt="many books">
-      <span>
+      <div>
         <img class="works-parent_img4-logo4" src="icons/logo4.png" width="230px" height="35px" alt="logo4">
-      </span>
+      </div>
 
-    </span>
+    </div>
   </section>
     
 
 
-  <sections class="response">
+  <sections id="response" class="response anim-items">
     <h2 class="response-header">Some words from our clients</h2>
-    <p>We don't like to brag, others do it for us.</p>
+    <p class="response-subtitle">We don't like to brag, others do it for us.</p>
+    <img class="response-image" src="icons/response.jpeg" alt="response">
+    <p class="response-text">Working with Pixova has been an experience for a lifetime. I strongly reccommend these guys for their awesome support. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat eleifend convallis.</p>
+    <p class="response-name">Katie Parry - Hooli</p>
   </sections>
 
-  <section class="latest-news">
-    <h2>Latest news</h2>
-    <p>Straight from our blog</p>
-  </section>
 
-  <section class="team">
+  <section id="news" class="news">
+    <h2 class="news-header">Latest news</h2>
+    <p class="news-subtitle">Straight from our blog</p>
+
+    <div class="news-block">
+      <div class="news-block_first">
+        <img src="icons/sea.jpeg" alt="sea" width="250px" height="300px">
+        <p class="news-block_date">September 15, 2017</p>
+        <h3 class="news-block_header"><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/aliquam-mauris-justo-sagittis-vitae-lacus-non/">Aliquam mauris justo, sagittis vitae lacus non</a></h3>
+        <p class="news-block_text">Aliquam mauris justo, sagittis vitae lacus non, vestibulum sollicitudin nisl.</p>
+      </div>
+
+      <div class="news-block_second">
+        <img src="icons/night_town.jpeg" alt="night town" width="250px" height="300px">
+        <p class="news-block_date">September 15, 2017</p>
+        <h3 class="news-block_header"><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/lorem-ipsum-dolor-sit-amet/">Lorem ipsum dolor sit amet</a></h3>
+        <p class="news-block_text">Suspendisse varius nulla vel mi fringilla, a pharetra lectus tempus.</p>
+      </div>
+
+      <div class="news-block_third">
+        <img src="icons/men_works.jpeg" alt="men works" width="250px" height="300px">
+        <p class="news-block_date">September 15, 2017</p>
+        <h3 class="news-block_header"><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/latest-announcements/">Latest announcements</a></h3>
+        <p class="news-block_text">Our latest free WordPress themes has launched on w.org.</p>
+      </div>
+
+      <div class="news-block_fourth">
+        <img src="icons/notebook.jpeg" alt="notebook" width="250px" height="300px">
+        <p class="news-block_date">August 9, 2017</p>
+        <h3 class="news-block_header"><a href="https://demo.colorlib.com/pixova-lite/2017/08/09/hello-world/">Hello world!</a></h3>
+        <p class="news-block_text">Welcome to colorlib.com. This is your first post. Edit or delete it, then start blogging!</p>
+      </div>
+      <div class="swiper-pagnation"></div>
+      <div class="swiper-button_prev"></div>
+      <div class="swiper-button_next"></div>
+    </div>
+  </section>
+<!-- ------------------------------------------------------------------------ -->
+ <!-- <div class="wrapper">
+    <div class="slider-container">
+      <div class="slider-track">
+      <!-- Slides -->
+        <!-- <div class="slider-item">
+          <img src="icons/sea.jpeg" alt="sea" width="213px" height="213px">
+          <p class="news-block_date">September 15, 2017</p>
+          <h3 class="news-block_header">Aliquam mauris justo, sagittis vitae lacus non</h3>
+          <p class="news-block_text">Aliquam mauris justo, sagittis vitae lacus non, vestibulum sollicitudin nisl.</p>
+        </div> -->
+
+        <!-- <div class="slider-item">
+          <img src="icons/night_town.jpeg" alt="night town" width="213px" height="213px">
+          <p class="news-block_date">September 15, 2017</p>
+          <h3 class="news-block_header">Lorem ipsum dolor sit amet</h3>
+          <p class="news-block_text">Suspendisse varius nulla vel mi fringilla, a pharetra lectus tempus.</p>
+        </div> -->
+
+        <!-- <div class="slider-item">
+          <img src="icons/men_works.jpeg" alt="men works" width="213px" height="213px">
+          <p class="news-block_date">September 15, 2017</p>
+          <h3 class="news-block_header">Latest announcements</h3>
+          <p class="news-block_text">Our latest free WordPress themes has launched on w.org.</p>
+        </div> -->
+
+        <!-- <div class="slider-item">
+         <img src="icons/notebook.jpeg" alt="notebook" width="213px" height="213px">
+         <p class="news-block_date">August 9, 2017</p>
+          <h3 class="news-block_header">Hello world!</h3>
+          <p class="news-block_text">Welcome to colorlib.com. This is your first post. Edit or delete it, then start blogging!</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="slider-buttons">
+      <button class="btn-prev">Prev</button>
+      <button class="btn-next">Next</button>
+    </div>
+  </div> --> 
+<!-- --------------------------------------------------------------------- -->
+
+  <section id="team" class="team">
     <h2 class="team-header">The team</h2>
     <p class="team-subtitle">Meet the people that made it all happen.</p>
       
     <div class="team-images">
-      <img src="icons/Angelina Doe.jpeg" alt="Angelina Doe">
-      <p>Angelina Doe</p>
-      <img src="icons/John Doe.jpeg" alt="John Doe">
-      <p>John Doe</p>
-      <img src="icons/Angelina Doe2.jpeg" alt="Angelina Doe">
-      <p>Angelina Doe</p>
-      <img src="icons/Angelina Doe3.jpeg" alt="Angelina Doe">
-      <p>Angelina Doe</p>
+      <div>
+        <img class="team-images_first" src="icons/Angelina Doe2.jpeg" alt="Angelina Doe">
+        <p class="team-images_text">Angelina Doe</p>
+        <div class="team-images_block">
+          <a class="team-images_block-link" href="https://www.facebook.com/profile.php?id=100017828386210"><i class="fab fa-facebook-square"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-pinterest-square"></i></a>
+          <a class="team-images_block-link" href="https://twitter.com/colorlib/"><i class="fab fa-twitter"></i></a>
+          <a class="team-images_block-link" href="https://www.instagram.com/elinka_toys/"><i class="fab fa-instagram"></i></a>
+          <a class="team-images_block-link" href="https://www.youtube.com/c/Colorlib"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <img class="team-images_second" src="icons/John Doe.jpeg" alt="John Doe">
+        <p class="team-images_text">John Doe</p>
+        <div class="team-images_block">
+          <a class="team-images_block-link" href="https://www.facebook.com/profile.php?id=100017828386210"><i class="fab fa-facebook-square"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-pinterest-square"></i></a>
+          <a class="team-images_block-link" href="https://twitter.com/colorlib/"><i class="fab fa-twitter"></i></a>
+          <a class="team-images_block-link" href="https://www.instagram.com/elinka_toys/"><i class="fab fa-instagram"></i></a>
+          <a class="team-images_block-link" href="https://www.youtube.com/c/Colorlib"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <img class="team-images_third" src="icons/Angelina Doe.jpeg" alt="Angelina Doe">
+        <p class="team-images_text">Angelina Doe</p>
+        <div class="team-images_block">
+          <a class="team-images_block-link" href="https://www.facebook.com/profile.php?id=100017828386210"><i class="fab fa-facebook-square"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="team-images_block-link" href="https://twitter.com/colorlib/"><i class="fab fa-twitter"></i></a>
+          <a class="team-images_block-link" href="https://www.youtube.com/c/Colorlib"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <img class="team-images_fourth" src="icons/Angelina Doe3.jpeg" alt="Angelina Doe">
+        <p class="team-images_text">Angelina Doe</p>
+        <div class="team-images_block">
+          <a class="team-images_block-link" href="https://www.facebook.com/profile.php?id=100017828386210"><i class="fab fa-facebook-square"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="team-images_block-link" href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-pinterest-square"></i></a>
+          <a class="team-images_block-link" href="https://www.instagram.com/elinka_toys/"><i class="fab fa-instagram"></i></a>
+          <a class="team-images_block-link" href="https://twitter.com/colorlib/"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
 
-  <section class="contact">
+  <section id="contact" class="contact anim-items">
       <h2 class="contact-header">Contact us</h2>
       <p class="contact-text">And we'll reply in no time</p>
     
@@ -143,12 +266,12 @@
 
 
     <div class="contact-form">
-      <form action="#" method="POST"></form>
+      <form class="form" id="form" action="https://my-json-server.typicode.com/typicode/demo" method="POST">
       <br><label for="name">Your Name (required)</label></br>
-      <br><input type="text" id="name" name="name"></br>
+      <br><input class="_req" type="text" id="name" name="name"></br>
 
       <br><label for="email">Your Email (required)</label></br>
-      <br><input type="text" id="email" name="email"></br>
+      <br><input class="_req _email" type="text" id="email" name="email"></br>
 
       <br><label for="subject">Subject</label></br>
       <br><input type="text" id="subject" name="subject"></br>
@@ -156,11 +279,12 @@
       <br><label>Your Message</label>
       <br><textarea class="contact-form_textarea"></textarea></br>
       <br><button class="contact-form_button" type="submit">Send</button></br>
+    </form>
     </div>
   </section>
 
 
-  <footer class="end">
+  <footer class="end anim-items">
       <h3 class="end-about">About us</h3>
       <p class="end-about_text">The many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected true of a humour.</p>
      
@@ -168,15 +292,23 @@
       <p class="end-themes_text">→ Free Themes → Shapely → Illdy</p> 
 
       <h3 class="end-posts">Recent Posts</h3>
-      <ul>
-        <li>Aliquam mauris justo, sagittis vitae lacus non</li>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Latest announcements</li>
+      <ul class="end-posts_text">
+        <li><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/aliquam-mauris-justo-sagittis-vitae-lacus-non/">Aliquam mauris justo, sagittis vitae lacus non</a></li>
+        <li><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/lorem-ipsum-dolor-sit-amet/">Lorem ipsum dolor sit amet</a></li>
+        <li><a href="https://demo.colorlib.com/pixova-lite/2017/09/15/latest-announcements/">Latest announcements</a></li>
+      </ul>
+
+      <ul class="end_icons">
+        <li><a href="https://www.facebook.com/profile.php?id=100017828386210"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://twitter.com/colorlib/"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-pinterest-square"></i></a></li>
+        <li><a href="https://www.pinterest.com/colorlib/_created/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.youtube.com/c/Colorlib"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/elinka_toys/"><i class="fab fa-instagram"></i></a></li>
       </ul>
 
       <span class="end-icons"></span>
-
-      <p class="end-footer">Theme: <span class="end-footer_pixova">Pixova Lite</span> · Made with &#128155; by <span class="end-footer_colorib">Colorlib</span> · © Copyright 2021. All Rights Reserved</p>
+      <p class="end-footer">Theme: <span class="end-footer_pixova">Pixova Lite</span> &#183; Made with &#128155; by <span class="end-footer_colorib">Elina</span> &#183; &#169; Copyright 2021. All Rights Reserved</p>
     </footer>
 </body>
 

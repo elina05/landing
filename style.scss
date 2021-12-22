@@ -56,176 +56,112 @@ table {
 body{
     background-color: (249, 249, 249)!important;
 }
-// ___________________________________________________________________________
-// body
-// {
-//   margin: 0;
-//   padding: 0;
-//   background: #fff;
-//   color: #cdcdcd;
-//   font-family: "Avenir Next", "Avenir", sans-serif;
-// }
-
-// #menuToggle
-// {
-//   display: block;
-//   position: relative;
-//   top: 50px;
-//   left: 50px;
-  
-//   z-index: 1;
-  
-//   -webkit-user-select: none;
-//   user-select: none;
-// }
-
-// #menuToggle a
-// {
-//   text-decoration: none;
-//   color: #232323;
-  
-//   transition: color 0.3s ease;
-// }
-
-// #menuToggle a:hover
-// {
-//   color: #f2c351;
-// }
 
 
-// #menuToggle input
-// {
-//   display: block;
-//   width: 40px;
-//   height: 32px;
-//   position: absolute;
-//   top: -7px;
-//   left: -5px;
-  
-//   cursor: pointer;
-  
-//   opacity: 0; 
-//   z-index: 2; 
-  
-//   -webkit-touch-callout: none;
-// }
-
-
-// #menuToggle span
-// {
-//   display: block;
-//   width: 33px;
-//   height: 4px;
-//   margin-bottom: 5px;
-//   position: relative;
-  
-//   background: #cdcdcd;
-//   border-radius: 3px;
-  
-//   z-index: 1;
-  
-//   transform-origin: 4px 0px;
-  
-//   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-//               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-//               opacity 0.55s ease;
-// }
-
-// #menuToggle span:first-child
-// {
-//   transform-origin: 0% 0%;
-// }
-
-// #menuToggle span:nth-last-child(2)
-// {
-//   transform-origin: 0% 100%;
-// }
-
-
-// #menuToggle input:checked ~ span
-// {
-//   opacity: 1;
-//   transform: rotate(45deg) translate(-2px, -1px);
-//   background: #232323;
-// }
-
-
-// #menuToggle input:checked ~ span:nth-last-child(3)
-// {
-//   opacity: 0;
-//   transform: rotate(0deg) scale(0.2, 0.2);
-// }
-
-
-// #menuToggle input:checked ~ span:nth-last-child(2)
-// {
-//   transform: rotate(-45deg) translate(0, -1px);
-// }
-
-
-// #menu
-// {
-//   position: absolute;
-//   width: 300px;
-//   margin: -100px 0 0 -50px;
-//   padding: 50px;
-//   padding-top: 125px;
-  
-//   background: #ededed;
-//   list-style-type: none;
-//   -webkit-font-smoothing: antialiased;
-//   /* to stop flickering of text in safari */
-  
-//   transform-origin: 0% 0%;
-//   transform: translate(-100%, 0);
-  
-//   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-// }
-
-// #menu li
-// {
-//   padding: 10px 0;
-//   font-size: 22px;
-// }
-
-// #menuToggle input:checked ~ ul
-// {
-//   transform: none;
-// }
-
-// ___________________________________________________________________________
 h2{
     color: #222533;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    font-family: Roboto,Arial,sans-serif; 
+    font-family: Arial,sans-serif; 
 }
+
+
+    
 
 .header{
     font-size: 22px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: #000;
-    margin-left: 125px;
+    margin-left: 135px;
     margin-top: 25px;
-    margin-bottom: 25px;
     margin-right: 0px;
     width: 1009px;
     position: relative;
-    z-index: 9;
+    z-index: 3;
     display: table;
     &-logo{
         text-decoration: none;
         color: #000;
         cursor: pointer;
-        font-family: Roboto,sans-serif;
+        font-family: sans-serif;
         font-size: 22px;
-        font-weight: 300;
+        font-weight: 200;
+        padding-right: 50px;
         &:hover{
             color: #f2c351;
         }
+    }
+    &-navigation{
+        display: flex;
+        flex-direction: row;
+        margin: 25px 0px 0px -115px;
+        &:hover{
+            cursor: pointer; 
+            .menu {
+                display: fixed;
+                padding: 10px ;
+                
+            }
+            ul {
+                display: flex;
+            }
+        }
+        &_menu{
+            vertical-align: baseline;
+            color: transparent;
+            color: #fff;
+            font-family: Roboto,sans-serif;
+            opacity: .75;
+            font-weight: 600;
+            font-size: 13px;
+            display: none;
+            margin-left: 700px;
+            margin-top: -45px;
+            padding: 20px;
+            li{
+                display: block;
+                font-family: Roboto,sans-serif;
+                font-weight: 600;
+                padding: 5px 15px;
+
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    &:hover{
+                        color: #f2c351;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        &::before{
+            content: '';
+            background-color: #000;
+            position: absolute;
+            width: 18px;
+            height: 3px;
+            margin: -33px 0px 0px 1270px;
+        }
+        &_design{
+            content: '';
+            background-color: #000;
+            position: absolute;
+            width: 18px;
+            height: 3px;
+            margin: -39px 0px 0px 1270px;
+        }
+        &:after{
+            content: '';
+            background-color: #000;
+            position: absolute;
+            width: 18px;
+            height: 3px;
+            margin: -45px 0px 0px 1270px;
+        }
+
     }
 }
 
@@ -239,6 +175,7 @@ h2{
     width:100%;
     margin-bottom: 100px;
     display: block;
+    z-index: 0;
 
     background: 
     url(https://demo.colorlib.com/pixova-lite/wp-content/themes/pixova-lite/layout/images/header-bg.jpg);
@@ -261,7 +198,8 @@ h2{
             background-color: #ffce55;
             width: 75px;
             height: 4px;
-            margin: 75px 255px 75px -283px;
+            left: 50%;
+            margin: 70px 255px 0px -32px;
         }
     }
     &-subtitle{
@@ -271,7 +209,7 @@ h2{
         font-family: 'Poppins', sans-serif;
     }
     &-text{
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 20px;
         font-weight: 100;
         text-align: center;
@@ -286,10 +224,11 @@ h2{
 
 .button{
     margin-bottom: 110px;
-    &-black{
+
+    &-black {
         border-color:#fff;
         cursor: pointer;
-        padding: 25px 60px;
+        padding: 20px 40px;
         margin: 10px 0px;
         margin-right: 25px;
         color: #fff;
@@ -299,23 +238,36 @@ h2{
         border-radius: 100px;
         border-width: 2px;
         position: relative;
-        &:hover{
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &:hover {
             border-color: #f2c351;
             color: #f2c351;
+            a{
+                color: #f2c351;
+            }
+
         }
     }
-    &-yellow{
+    &-yellow {
         cursor: pointer;
-        padding: 25px 60px;
+        padding: 20px 40px;
         margin: 10px 0px;
         color: #fff;
         border-radius: 100px;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         letter-spacing: 1px;
         background-color: #f2c351;
         border-color: transparent;
         font-size: 18px;
         font-weight: 500;
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
         &:hover{
             background-color: #ffcc56;
         }
@@ -327,6 +279,7 @@ h2{
 /* solutions */
 
 .solutions{
+    z-index: 0;
     text-align: center;
     background-color: rgb(249, 249, 249);
     &-header{
@@ -350,7 +303,7 @@ h2{
         margin-top: 10px;
         color: #333;
         display: block;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 16px;
         font-weight: 100;
         
@@ -369,12 +322,12 @@ h2{
         font-size: 16px;
         padding: 15px 30px;
         margin: 30px 145px 80px;
-        font-family: Roboto,sans-serif;
+        font-family: sans-serif;
         border-left: 5px solid #f2c351;
         line-height: 1.8;
     }
     &-diagrams{
-        font-family: Roboto,sans-serif;
+        font-family:  Arial, sans-serif;
         font-size: 16px;
         color: #333;
         font: inherit;
@@ -395,7 +348,6 @@ h2{
         background-color: #ffce55;
     }
 }
-
 
 
 
@@ -430,7 +382,7 @@ h2{
         padding-top: 10px;
         color: #333;
         display: block;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 16px;
         font-weight: 300;
     }
@@ -442,10 +394,6 @@ h2{
         justify-content: center;
         &_img1{
             position: relative;
-            &:hover{
-                background-blend-mode: multiply;
-                background-color: rgba(255, 255, 255, 0.9);
-            }
             &-logo1{
                 position: absolute;
                 background-color: #fff;
@@ -456,9 +404,19 @@ h2{
                 padding-right: 28px;
                 bottom: 0;
                 z-index: 10;
+                &_button{
+                    display: none;
+                    position: absolute;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.9);
                     padding: 375px 28px 40px 27px;
+                    &_button{
+                        display: block;
+                    }
                 }
             }
         }
@@ -519,7 +477,9 @@ h2{
     }
 }
 
-
+.works.active{
+    transform: translateY(0);
+}
 
 
 
@@ -531,7 +491,7 @@ h2{
         color: #222533;
         font-size: 30px;
         font-weight: 600;
-        padding-top: 10px;
+        margin-top: 40px;
         padding-bottom: 23px;
         &:after{
             content: "";
@@ -543,10 +503,32 @@ h2{
             margin: 52px 255px 0px -32px;
         }
     }
-    &:after{
-        content: "";
-        position: absolute;
-        background-color: #ffce55;
+    &-subtitle{
+        margin-top: 25px;
+        color: #333;
+        display: block;
+        font-family: Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+    &-image{
+        margin: 30px 655px;
+        justify-content: center;
+        align-items: center;
+    }
+    &-text{
+        color: #363636;
+        font-size: 18px;
+        line-height: 1.8;
+        padding: 0px 165px;
+    }
+    &-name{
+        color: #f2c351;
+        font-size: 16px;
+        font-style: normal;
+        margin-top: 10px;
+        text-transform: uppercase;
     }
 }
 
@@ -554,15 +536,98 @@ h2{
 
 /* latest-news */
 
-.latest-news{
+.news{
+    margin-top: 100px;
     text-align: center;
-    &:after{
-        content: "";
-        position: absolute;
-        background-color: #ffce55;
+    &-header{
+        &:after{
+            content: "";
+            position: absolute;
+            width: 66px;
+            height: 3px;
+            background-color: #ffce55;
+            left: 50%;
+            margin: 52px 255px 0px -32px;
+        }
+    }
+    &-subtitle{
+        margin-top: 25px;
+        color: #333;
+        display: block;
+        font-family: Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 65px;
+    }
+    &-block{
+        display: flex;
+        justify-content: space-between;
+        &_first{
+            margin: 0px 30px;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            &:hover{
+                color: #f2c351;
+            }
+        }
+        &_date{
+            margin-top: 30px;
+            margin-bottom: 25px;
+            color: #f2c351;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: Arial,sans-serif;
+        }
+        &_header{
+            color: #333;
+            display: block;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-family: Poppins,sans-serif;
+            &:hover{
+                cursor: pointer;
+                color: #f2c351;
+            }
+        }
+        &_text{
+            padding: 0px 70px;
+            font-size: 15px;
+            line-height: 27px;
+            font-family: Roboto;
+            color: #777;
+            text-align: center;
+        }
     }
 }
 
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.slider-container{
+    overflow: hidden;
+}
+
+
+.slider-track{
+    display: flex;
+    transition: .2s;
+}
+
+
+.slider-item{
+    height: auto;
+    min-width: 200px;
+}
+
+
+.slider-buttons{
+    text-align: center;
+}
 
 
 /* team */
@@ -575,7 +640,7 @@ h2{
         font-weight: 600;
         margin-bottom: 20px;
         padding-bottom: 20px;
-        margin-top: 100px;
+        margin-top: 150px;
         &:after{
             content: "";
             position: absolute;
@@ -591,16 +656,91 @@ h2{
         padding-top: 10px;
         color: #333;
         display: block;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 16px;
         font-weight: 300;
     }
-
     &-images{
+        transition: all 0.5 ease 0;
         margin-top: 70px;
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
-        display: flex;
+        padding: 0px 150px ;
+        &_block{
+            // visibility: hidden;
+            vertical-align: baseline;
+            border-radius: 5px;
+            text-align: center;
+            word-spacing: 10px;
+            justify-content: space-around;
+            padding-top: 10px;
+            width: 165px;
+            height: 30px;
+            background-color: #4a4a4a;
+            &:hover + div{
+                visibility: visible;
+            }
+
+            &-link{
+                border-radius: 4px;
+                text-align: center;
+                font-size: 14px;
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    color: #f2c351;
+                    cursor: pointer;  
+                }
+            }
+
+        }
+        &_first{
+            &:hover{
+                opacity: .75;
+                cursor: pointer;
+                width: 140px;
+                height: 140px;
+                transition: all 0.5 ease 0;
+            }
+        }
+        &_second{
+            &:hover{
+                opacity: .75;
+                cursor: pointer;
+                width: 140px;
+                height: 140px;
+                transition: all 0.5 ease 0;
+            }
+        }
+        &_third{
+            &:hover{
+                opacity: .75;
+                cursor: pointer;
+                width: 140px;
+                height: 140px;
+                transition: all 0.5 ease 0;
+            }
+        }
+        &_fourth{
+            &:hover{
+                opacity: .75;
+                cursor: pointer;
+                width: 140px;
+                height: 140px;
+                transition: all 0.5 ease 0;
+            }
+        }
+
+        &_text{
+            margin-bottom: 10px;
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            position: relative;
+            font-family: Arial,sans-serif;
+        }
     }
 }
 
@@ -610,12 +750,14 @@ h2{
 
 
 .contact{
+    position: relative;
     background-color: rgb(240, 240, 240);
     margin-top: 80px;
     padding-top: 40px;
-    div h3{
+
+    >div h3{
         color: #363636;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 21px;
         font-weight: 100;
     }
@@ -641,7 +783,7 @@ h2{
         color: #333;
         font-family: Roboto;
         margin: 25px 140px 0px;
-        font-family: Roboto,Arial,sans-serif;
+        font-family: Arial,sans-serif;
         font-size: 16px;
         font-weight: 300;
     }
@@ -654,7 +796,7 @@ h2{
 
         &_header{
             color: #363636;
-            font-family: Roboto,Arial,sans-serif;
+            font-family: Arial,sans-serif;
             font-size: 21px;
             font-weight: 100;
             margin-bottom: 20px;
@@ -662,18 +804,44 @@ h2{
         &_text{
             margin-bottom: 20px;
             color: #777;
-            font-size: 13px;
-            font-family: Roboto,sans-serif;
+            font-size: 16px;
+            font-family: sans-serif;
+            > a{
+                text-decoration: none;
+                color: #777;
+            }
         }
-        // &-adress{}
-        // &-phone{}
-    }
+        &-adress{
+            padding-bottom: 50px;
+        }
+        // &-phone{            
+}
     &-form{
         flex-direction: column;
         margin: -295px 340px 150px 510px;
+        background-color: #f0f0f0;
+        outline: #f2c351;
+        input{
+            background-color: #f0f0f0;
+            border-color: rgb(220, 220, 220);
+            border-style: solid;
+            width: 775px;
+            height: 40px;
+            font-size: 18px;
+            outline: none;
+            :focus{
+                box-shadow: 0 0 15px #7a956b;
+            }
+        }
         &_textarea{
             width: 775px;
             height: 195px;
+            background-color: #f0f0f0;
+            border-color: rgb(223, 222, 223);
+            border-style: solid;
+            resize: vertical;
+            outline: none;
+            font-size: 18px;
         }
         &_button{
             margin-top: 30px;
@@ -683,6 +851,9 @@ h2{
             color: #fff;
             border-color: transparent;
             margin-bottom: 50px;
+            border-radius: 10px;
+            transition: 0.5 ease 0s;
+            position: relative;
             &:hover{
                 background-color: #ffcc56;
                 cursor: pointer;
@@ -690,41 +861,75 @@ h2{
         }
     }   
 }
-a{
-    text-decoration: none;
-    color: #777;
+
+input:focus{
+    box-shadow: 0 0 15px #beba81;
+    transition: all 0.5s ease 0s;
+}
+textarea:focus{
+    box-shadow: 0 0 15px #beba81;
+    transition: all 0.5s ease 0s;
+}
+.invalid{
+    box-shadow: 0 0 15px rgb(255, 72, 0);
+    transition: all 0.5s ease 0s;  
 }
 
 
 
-
 .end{
+    position: relative;
     background-color: rgb(49, 50, 51);
     color: #fff;
     padding-top: 35px;
     margin-top: -150px;
     &-about{
+        font-size: 21px;
+        font-family:  Arial, sans-serif;
+        font-weight: 100;
         margin: 0px 920px 10px 135px;
         &_text{
             color: rgba(255,255,255,.75);
             line-height: 1.8;
             margin: 0px 920px 70px 135px;
             font-size: 16px;
-            font-family: Roboto,sans-serif;
+            font-family: sans-serif;
         }
     }
     &-themes{
+        font-size: 21px;
+        font-family:  Arial, sans-serif;
+        font-weight: 100;
         margin: -185px 585px 10px 535px;
         &_text{
             line-height: 1.8;
             margin: 0px 585px 10px 535px;
             font-size: 14px;
-            font-family: Roboto,sans-serif;
+            font-family: sans-serif;
         }
     }
     &-posts{
         margin: -65px 205px 10px 905px;
-
+        font-family:  Arial, sans-serif;
+        font-weight: 100;
+        font-size: 21px;
+        &_text{
+            > li{
+                >a{
+                    display: inline-block;
+                    color: #fff;
+                    text-decoration: none;
+                    line-height: 1.8;
+                    margin: 0px 0px 5px 905px;
+                    font-size: 14px;
+                    font-family: sans-serif;
+                    &:hover{
+                        color: #f2c351;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
     &-footer{
         text-align: center;
@@ -733,7 +938,7 @@ a{
         padding-top: 25px;
         color: rgba(255,255,255,.75);
         font-size: 16px;
-        font-family: Roboto, sans-serif;
+        font-family:  sans-serif;
         &_pixova{
             font-size: 16px;
             color: #fff;
@@ -747,18 +952,32 @@ a{
             color: #fff;
             &:hover{
                 color: #f2c351;
-                cursor: pointer;  
-            }
+                cursor: pointer; 
+            } 
         }
     }
-}
-li{
-    line-height: 1.8;
-    margin: 0px 0px 5px 905px;
-    font-size: 14px;
-    font-family: Roboto,sans-serif;
-    &:hover{
-        color: #f2c351;
-        cursor: pointer;
-    }
+    &_icons{ 
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        li{
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #4a4a4a;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+            display: inline-block;
+            &:hover{
+                background-color: #f2c351;
+                color: #f2c351;
+                cursor: pointer;  
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }   
 }
