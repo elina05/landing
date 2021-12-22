@@ -112,6 +112,7 @@
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
 async function formSend(e) {
+
    e.preventDefault();
    function formValidate(form) {
       let error = 0;
@@ -138,24 +139,24 @@ async function formSend(e) {
 
       return error;
    }
-   formValidate(form);
+   const error = formValidate(form);
 
 
    if (error === 0) {
     let response = await fetch('https://my-json-server.typicode.com/elina05/Server/posts/1', {
        method: 'POST',
        body: JSON.stringify({
-          name: validateForm[0].value,
-          email: validateForm[1].value,
-          subject: validateForm[2].value,
-          message: validateForm[3].value,
+          name: form[0].value,
+          email: form[1].value,
+          subject: form[2].value,
+          message: form[3].value,
        }),
        headers: {
           'Content-type': 'application/json; charset=UTF-8',
        }
     });
     for (let i = 0; i < 4; i++) {
-       validateForm[i].value = '';
+       form[i].value = '';
     }
 
     function deleteMess() {
@@ -165,7 +166,7 @@ async function formSend(e) {
        let div = document.createElement('div');
        div.setAttribute("id", "message--success");
        div.innerHTML = "Message sent successfully";
-       validateForm.after(div);
+       form.after(div);
 
        setTimeout(deleteMess, 5000);
     } else {
@@ -202,7 +203,7 @@ async function formSend(e) {
              please try again later`;
              break;
        }
-       validateForm.after(div);
+       form.after(div);
        setTimeout(deleteMess, 5000);
     }
  }
