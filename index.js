@@ -69,14 +69,14 @@
       //  ctx.stroke();
  
        function drawText(x, y, text, ctx) {
-        ctx.font = "30px Arial";
+        ctx.font = "30px Poppins";
         ctx.fillText(text, x, y);
        }
  
        function removeText(x, y, txt_length, font_height, char_width, ctx) {
         ctx.clearRect(x, y - font_height, char_width * txt_length, font_height);
        }
- 
+       window.removeEventListener('scroll', drawGraph)
        timer = setInterval(() => {
         const procent = progress * 2 / 100;
 
@@ -96,14 +96,13 @@
           clearInterval(timer);
         }
         progress++;
-       }, 60);
+       }, 20);
     })
  }
 
- console.log('!!!!!!')
- drawGraph()
+//  drawGraph()
  
-//  window.addEventListener('scroll', drawGraph);
+ window.addEventListener('scroll', drawGraph);
 
 
 
@@ -143,7 +142,7 @@ async function formSend(e) {
 
 
    if (error === 0) {
-    let response = await fetch('https://my-json-server.typicode.com/elina05/Server/posts/1', {
+    let response = await fetch('https://my-json-server.typicode.com/elina05/server/posts/1', {
        method: 'POST',
        body: JSON.stringify({
           name: form[0].value,
@@ -160,7 +159,11 @@ async function formSend(e) {
     }
 
     function deleteMess() {
-       document.getElementById('message--success').remove();
+      if (response.status >= 200 && response.status <= 300){
+        document.getElementById('message--success').remove();
+      } else {
+        document.getElementById('message--error').remove();
+      }
     }
     if (response.status >= 200 && response.status <= 300) {
        let div = document.createElement('div');

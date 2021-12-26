@@ -114,6 +114,8 @@ h2 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 25px 0px 0px -115px;
+  padding-left: 30px;
+  padding-right: 20px;
 }
 
 .header-navigation:hover {
@@ -123,6 +125,7 @@ h2 {
 .header-navigation:hover .menu {
   display: fixed;
   padding: 10px;
+  padding-right: 20px;
 }
 
 .header-navigation:hover ul {
@@ -140,8 +143,8 @@ h2 {
   font-weight: 600;
   font-size: 13px;
   display: none;
-  margin-left: 700px;
-  margin-top: -45px;
+  margin-left: 692px;
+  margin-top: -63px;
   padding: 20px;
 }
 
@@ -304,6 +307,11 @@ h2 {
   background-color: #ffcc56;
 }
 
+.about__graph-value {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* solutions */
 .solutions {
   z-index: 0;
@@ -360,11 +368,6 @@ h2 {
 }
 
 .solutions-diagrams {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-  font: inherit;
-  font-weight: 100;
   padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,10 +379,18 @@ h2 {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 195px;
+  margin-top: 5px;
   margin-bottom: 70px;
   padding-top: 90px;
   padding-bottom: 25px;
+}
+
+.solutions-diagrams h4 {
+  font-size: 16px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font: inherit;
+  font-weight: 100;
 }
 
 .solutions:after {
@@ -426,16 +437,18 @@ h2 {
   font-weight: 300;
 }
 
+.works-item {
+  width: 25%;
+  position: relative;
+}
+
 .works-parent {
-  width: 1140px;
+  max-width: 1140px;
   height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 70px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .works-parent_img1 {
@@ -445,34 +458,9 @@ h2 {
 .works-parent_img1-logo1 {
   position: absolute;
   background-color: #fff;
-  padding: 40px 0px;
-  margin: 320px 170px 30px -285px;
-  margin-right: 450px;
-  padding-left: 27px;
-  padding-right: 28px;
   bottom: 0;
   z-index: 10;
-}
-
-.works-parent_img1-logo1_button {
-  display: none;
-  position: absolute;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.works-parent_img1-logo1:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 375px 28px 40px 27px;
-}
-
-.works-parent_img1-logo1:hover_button {
-  display: block;
+  width: 100%;
 }
 
 .works-parent_img2 {
@@ -482,18 +470,8 @@ h2 {
 .works-parent_img2-logo2 {
   position: absolute;
   background-color: #fff;
-  padding: 40px 0px;
-  margin: 320px 170px 30px -285px;
-  margin-right: 450px;
-  padding-left: 27px;
-  padding-right: 28px;
-  bottom: 0;
   z-index: 10;
-}
-
-.works-parent_img2-logo2:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 375px 28px 40px 27px;
+  width: 100%;
 }
 
 .works-parent_img3 {
@@ -503,18 +481,9 @@ h2 {
 .works-parent_img3-logo3 {
   position: absolute;
   background-color: #fff;
-  padding: 40px 0px;
-  margin: 320px 170px 30px -285px;
-  margin-right: 450px;
-  padding-left: 27px;
-  padding-right: 28px;
   bottom: 0;
   z-index: 10;
-}
-
-.works-parent_img3-logo3:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 375px 28px 40px 27px;
+  width: 100%;
 }
 
 .works-parent_img4 {
@@ -524,23 +493,9 @@ h2 {
 .works-parent_img4-logo4 {
   position: absolute;
   background-color: #fff;
-  padding: 40px 0px;
-  margin: 320px 170px 30px -285px;
-  margin-right: 450px;
-  padding-left: 27px;
-  padding-right: 28px;
   bottom: 0;
   z-index: 10;
-}
-
-.works-parent_img4-logo4:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 375px 28px 40px 27px;
-}
-
-.works.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  width: 100%;
 }
 
 /* clients-words */
@@ -577,13 +532,16 @@ h2 {
 }
 
 .response-image {
-  margin: 30px 655px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 45%;
+  margin-bottom: 20px;
 }
 
 .response-text {
@@ -636,8 +594,32 @@ h2 {
           justify-content: space-between;
 }
 
-.news-block_first {
-  margin: 0px 30px;
+.news-block_first:hover {
+  opacity: .9;
+  cursor: pointer;
+  -webkit-transition: all 0.5 ease 0;
+  transition: all 0.5 ease 0;
+}
+
+.news-block_second:hover {
+  opacity: .9;
+  cursor: pointer;
+  -webkit-transition: all 0.5 ease 0;
+  transition: all 0.5 ease 0;
+}
+
+.news-block_third:hover {
+  opacity: .9;
+  cursor: pointer;
+  -webkit-transition: all 0.5 ease 0;
+  transition: all 0.5 ease 0;
+}
+
+.news-block_fourth:hover {
+  opacity: .9;
+  cursor: pointer;
+  -webkit-transition: all 0.5 ease 0;
+  transition: all 0.5 ease 0;
 }
 
 .news-block a {
@@ -916,7 +898,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: -295px 340px 150px 510px;
+  margin: -305px 290px 150px 580px;
   background-color: #f0f0f0;
   outline: #f2c351;
 }
@@ -1008,13 +990,14 @@ textarea:focus {
   margin: 0px 920px 70px 135px;
   font-size: 16px;
   font-family: sans-serif;
+  padding-right: 50px;
 }
 
 .end-themes {
   font-size: 21px;
   font-family: Arial, sans-serif;
   font-weight: 100;
-  margin: -185px 585px 10px 535px;
+  margin: -215px 585px 10px 535px;
 }
 
 .end-themes_text {
@@ -1106,5 +1089,27 @@ textarea:focus {
 .end_icons li a {
   text-decoration: none;
   color: #fff;
+}
+
+#message--success {
+  font-size: 24px;
+  border: 2px solid #09ff00;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-align: center;
+  color: #000;
+  background-color: #f0f0f0;
+  z-index: 11;
+}
+
+#message--error {
+  font-size: 24px;
+  border: 2px solid #ff4800;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-align: center;
+  color: #000;
+  background-color: #f0f0f0;
+  z-index: 11;
 }
 /*# sourceMappingURL=style.css.map */
